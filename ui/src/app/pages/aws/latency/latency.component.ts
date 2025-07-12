@@ -127,13 +127,28 @@ export class LatencyComponent implements OnInit, OnDestroy {
   private async pingRegion(region: RegionModel): Promise<void> {
     const url = this.constructPingUrl(region)
     const pingStartTime = isPlatformBrowser(this.platformId) ? performance.now() : Date.now()
+    
     try {
-      await axios.head(url, {
-        timeout: 2000,
-        params: {
-          _: Date.now() // Cache busting
-        }
-      })
+      const isProduction = window.location.hostname.includes('herokuapp.com')
+      
+      if (isProduction) {
+        // For production, use fetch with no-cors mode for simple ping
+        const response = await fetch(url, {
+          method: 'HEAD',
+          mode: 'no-cors',
+          cache: 'no-cache'
+        })
+        // In no-cors mode, we can't read the response, but we can measure timing
+      } else {
+        // For local development, use axios as before
+        await axios.head(url, {
+          timeout: 2000,
+          params: {
+            _: Date.now() // Cache busting
+          }
+        })
+      }
+      
       const pingEndTime = isPlatformBrowser(this.platformId) ? performance.now() : Date.now()
       const pingDuration = pingEndTime - pingStartTime
       if (region.storageAccountName) {
