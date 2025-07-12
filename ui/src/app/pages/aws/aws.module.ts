@@ -7,18 +7,14 @@ import { AwsRoutingModule } from './aws-routing.module'
 import {
   AboutComponent,
   AwsComponent,
-  GeographiesComponent,
-  LatencyComponent,
-  RegionsComponent
+  LatencyComponent
 } from './index'
 
 @NgModule({
   declarations: [
     AwsComponent,
     AboutComponent,
-    GeographiesComponent,
-    LatencyComponent,
-    RegionsComponent
+    LatencyComponent
   ],
   imports: [CommonModule, AwsRoutingModule, SharedModule, LineChartModule, FormsModule],
   providers: [],

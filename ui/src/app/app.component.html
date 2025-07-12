@@ -1,13 +1,13 @@
 <header class="navbar navbar-dark bg-dark fixed-top shadow-sm" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand fw-semibold" href="/" aria-label="AWS Speed Test">
+    <a class="navbar-brand fw-semibold" href="/" aria-label="AWS Latency Testing - 111221007">
       <i class="fas fa-cloud me-2"></i>
       AWS Speed Test
     </a>
     <div class="navbar-nav flex-row">
       <a
         class="px-3 text-white text-decoration-none d-flex align-items-center"
-        href="https://github.com/blrchen/aws-speed-test"
+        href="https://github.com/111221007/aws-speed-test-taiwan"
         target="_blank"
         rel="noopener"
         aria-label="GitHub Repository"
@@ -55,43 +55,11 @@
             <li class="nav-item">
               <a
                 class="nav-link d-flex align-items-center gap-2 px-3 py-2"
-                [class.active]="isCurrentPath('/chatgpt/chatgpt-assistant')"
-                href="/chatgpt/chatgpt-assistant"
-              >
-                <i class="fas fa-robot"></i>
-                ChatGPT Assistant
-              </a>
-            </li>
-            <li><hr class="dropdown-divider mx-3" /></li>
-            <li class="nav-item">
-              <a
-                class="nav-link d-flex align-items-center gap-2 px-3 py-2"
                 [class.active]="isCurrentPath('/latency')"
                 href="/latency"
               >
                 <i class="fas fa-tachometer-alt"></i>
                 AWS Latency Test
-              </a>
-            </li>
-            <li><hr class="dropdown-divider mx-3" /></li>
-            <li class="nav-item">
-              <a
-                class="nav-link d-flex align-items-center gap-2 px-3 py-2"
-                [class.active]="isCurrentPath('/regions')"
-                href="/regions"
-              >
-                <i class="fas fa-globe"></i>
-                AWS Regions
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link d-flex align-items-center gap-2 px-3 py-2"
-                [class.active]="isCurrentPath('/geographies')"
-                href="/geographies"
-              >
-                <i class="fas fa-globe-americas"></i>
-                AWS Geographies
               </a>
             </li>
             <li><hr class="dropdown-divider mx-3" /></li>

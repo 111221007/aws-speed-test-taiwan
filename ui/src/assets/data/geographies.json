@@ -32,6 +32,30 @@
         "restricted": false
       },
       {
+        "displayName": "Asia Pacific (Taipei)",
+        "geographyGroup": "Asia Pacific",
+        "latitude": null,
+        "longitude": null,
+        "pairedRegion": null,
+        "physicalLocation": "Taiwan",
+        "regionalDisplayName": null,
+        "name": "ap-east-2",
+        "availabilityZoneCount": 3,
+        "restricted": false
+      },
+      {
+        "displayName": "Asia Pacific (Taipei)",
+        "geographyGroup": "Asia Pacific",
+        "latitude": null,
+        "longitude": null,
+        "pairedRegion": null,
+        "physicalLocation": "Taiwan",
+        "regionalDisplayName": null,
+        "name": "ap-east-2",
+        "availabilityZoneCount": 3,
+        "restricted": false
+      },
+      {
         "displayName": "Asia Pacific (Tokyo)",
         "geographyGroup": "Asia Pacific",
         "latitude": null,

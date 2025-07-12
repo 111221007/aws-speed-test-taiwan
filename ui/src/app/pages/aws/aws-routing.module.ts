@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { AwsComponent } from './aws.component'
-import { AboutComponent, GeographiesComponent, LatencyComponent, RegionsComponent } from './index'
+import { AboutComponent, LatencyComponent } from './index'
 
 const routes: Routes = [
   {
@@ -12,16 +12,6 @@ const routes: Routes = [
         path: 'latency',
         data: { title: 'AWS Latency Test' },
         component: LatencyComponent
-      },
-      {
-        path: 'geographies',
-        data: { title: 'AWS Geographies' },
-        component: GeographiesComponent
-      },
-      {
-        path: 'regions',
-        data: { title: 'AWS Regions' },
-        component: RegionsComponent
       },
       {
         path: 'about',
