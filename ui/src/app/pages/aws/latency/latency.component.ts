@@ -279,10 +279,12 @@ export class LatencyComponent implements OnInit, OnDestroy {
       : []
   }
 
-  private formatXAxisTick(timestamp: number): string {
-    const date = new Date(timestamp)
-    const minutes = date.getMinutes().toString().padStart(2, '0')
-    const seconds = date.getSeconds().toString().padStart(2, '0')
-    return `${minutes}:${seconds}`
+
+   private formatXAxisTick(ts: number): string {
+    const d = new Date(ts);
+    const h = String(d.getHours()).padStart(2, '0');
+    const m = String(d.getMinutes()).padStart(2, '0');
+    const s = String(d.getSeconds()).padStart(2, '0');
+    return `${h}:${m}:${s}`;
   }
 }
