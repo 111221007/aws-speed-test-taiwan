@@ -1,0 +1,1 @@
+web: cd ui && node dist/aws-speed-test/server/server.mjs
